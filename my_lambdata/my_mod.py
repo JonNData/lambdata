@@ -6,3 +6,4 @@ def enlarge(n):
     Function will enlarge the number
     """
     return n * 100
+if __name__ == "__main__":
