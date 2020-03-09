@@ -1,3 +1,3 @@
 # my_lambdata/my_script.py
-import pandas as import pdb; pdb.set_trace()
+import pandas as pd
 print("Hello World")
