@@ -8,7 +8,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="mylambdata",
-    version="1.0",
+    version="1.01",
     author="MJ Rossetti",
     author_email="datacreativellc@gmail.com",
     description="for example purposes",

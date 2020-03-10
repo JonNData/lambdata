@@ -10,6 +10,8 @@ twine = "*"
 pandas = "*"
 numpy = "*"
 sendgrid = "==5.6.0"
+scikit-learn = "*"
+autopep8 = "*"
 
 [requires]
 python_version = "3.7"
