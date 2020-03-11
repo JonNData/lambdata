@@ -4,14 +4,21 @@
 
 import pandas as pd 
 
-def add_state_names(my_df):
-    """
-    Add a column of state names to a df with state abbrevs
-    my_df is a pandas.Dataframe, should have a column of abbrev
-    Return  a copy of the df with a new column of "name"
-    """
 
-    names_map = {
+class DataProcessor():
+    def __init__(self, my_df):
+        """
+        my_df is a pandas.Dataframe, should have a column of abbrev
+        """
+        self.df = my_df
+
+    def add_state_names(self):
+        """
+        Add a column of state names to a df with state abbrevs
+    
+        Return  a copy of the df with a new column of "name"
+        """
+        names_map = {
         'AK': 'Alaska',
         'AL': 'Alabama',
         'AR': 'Arkansas',
@@ -70,15 +77,15 @@ def add_state_names(my_df):
         'WV': 'West Virginia',
         'WY': 'Wyoming'
 }
-    # breakpoint() # only available in 3.7 or later, else pdb
-    new_df = my_df.copy()
-    new_df['name'] = my_df['abbrev'].map(names_map)
-    return new_df
+        # breakpoint() # only available in 3.7 or later, else pdb
+        self.df['name'] = self.df['abbrev'].map(names_map)
+        
 
-df = pd.DataFrame({"abbrev": ["CT", "CO", "CA", "TX"]})
-mutant = add_state_names(df)
-print(mutant.head())
-
+df1 = pd.DataFrame({"abbrev": ["CT", "CO", "CA", "TX"]})
 df2 = pd.DataFrame({"abbrev": ["AZ", "DC", "MI", "WI"]})
-mutant2 = add_state_names(df2)
-print(mutant2.head())
+
+for df in [df1, df2]:
+    processor = DataProcessor(df)
+    processor.add_state_names()
+    print(processor.df.head())
+
