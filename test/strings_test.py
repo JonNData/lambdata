@@ -3,7 +3,7 @@
 import unittest
 
 class TestStringMethods(unittest.TestCase):
-
+# an example of unit testing
     def test_upper(self):
         self.assertEqual('foo'.upper(), 'FOO')
 

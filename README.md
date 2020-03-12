@@ -13,13 +13,17 @@ cd path/to/lambdata
 Install package dependencies:
 
 ```sh
-pipenv install
+pipenv install pandas
 ```
 
+To use in a notebook
+```sh
+pip install -i https://test.pypi.org/simple/ mylambdata
+```
 
 # Usage
 
-An example script, not what will be used when will install our package
+An example script, a collection of classes that may be built upon
 
 ```sh
 python my-lambdata/my_script.py

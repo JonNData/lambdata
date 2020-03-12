@@ -6,6 +6,9 @@ from my_lambdata.my_mod import enlarge
 class TestMyMod(unittest.TestCase):
 
     def test_enlarge(self):
+        """
+        Unit test that the enlarge function in the my_mod file is working properly
+        """
         self.assertEqual(enlarge(5), 500)
 
 

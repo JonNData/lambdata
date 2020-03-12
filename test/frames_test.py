@@ -6,6 +6,9 @@ from my_lambdata.frames import MyFrame
 class TestMyFrame(unittest.TestCase):
 
     def test_add_state_name(self):
+        """ 
+        Test if the add_state_name method in the MyFrame class is working properly
+        """
         my_frame = MyFrame({"abbrev": ["CT", "CO", "CA", "TX"]})
         
         #test to make sure this setup properly, not there before
